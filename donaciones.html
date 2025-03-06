@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Shao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #ffffff;
+            overflow-x: hidden;
+            padding: 0;
+        }
+
+     
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        #loading-video {
+            width: 200px;
+            height: auto;
+        }
+
+        
+        .header {
+            background-color: rgba(255, 255, 255, 0.9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+
+        .header .logo img {
+            height: 40px;
+            margin-right: 20px;
+        }
+
+       
+        #content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding-top: 100px; 
+            padding-bottom: 20px; 
+            overflow-y: auto;
+        }
+
+    
+        .content-paragraph {
+            color: #777;
+            background-color: white;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 16px;
+            width: 600px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: none; 
+        }
+		.content-paragraph:last-child {
+    	margin-bottom: 100px;
+		}
+
+        
+        #contenedor {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+       
+        .caja {
+            width: 30%;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            float: left;
+            margin-bottom: 20px;
+        }
+
+		
+        .caja_imagen img {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+		
+
+        .caja .texto {
+            padding: 15px;
+            font-size: 14px;
+            color: #333;
+        }
+
+       
+            .footer {
+      background-color: rgba(255, 255, 255, 0.80);
+      color: #333;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 12x;
+	  }
+
+        .footer a {
+            color: #A90000;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+       
+        @media (max-width: 768px) {
+            .content-paragraph {
+                width: 90%;
+                font-size: 14px;
+                padding: 20px;
+            }
+
+            #contenedor {
+                display: block;
+                width: 100%;
+            }
+
+            .caja {
+                width: 100%; 
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-paragraph {
+                font-size: 12px;
+                padding: 15px;
+            }
+        }
+
+    </style>
+    <script>
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            const content = document.getElementById('content');
+            
+            setTimeout(() => {
+                loadingScreen.style.display = 'none';
+                content.style.display = 'flex';
+            }, 4000);
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const inicioLink = document.querySelector('a[href="#"]');
+            if (inicioLink) {
+                inicioLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="loading-screen">
+        <video id="loading-video" autoplay muted loop>
+            <source src="recursos/animaciones/animación.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </div>
+
+ <div id="content">
+        <div class="header">
+            <div class="logo">
+                <img src="recursos/shao/Logo_shao.png" alt="Logo Shao">
+            </div>
+        </div>
+
+        <div class="content-paragraph">
+            <h1 style="font-family:'Sour Gummy'; color:black; text-align: center">¿Cómo apoyar a creadores y artistas?</h1>
+            <h3 style="font-family:'Sour Gummy'; text-align:center;">Tu apoyo significa mucho</h3>
+            <p>Si mis proyectos te inspiran, considera <strong>compartir</strong> mi portfolio o <strong>apoyar</strong> mi trabajo para que pueda seguir creando y creciendo.</p>
+            <h3 style="font-family:'Sour Gummy'">Y...¿cómo puedo apoyarte?</h3>
+        </div>
+
+        <div id="contenedor">
+            <div id="caja1" class="caja">
+                <div class="caja_imagen">
+					<p style="text-align: center;">
+					<a href="https://www.instagram.com/shao.yang.na/profilecard/?igsh=MXhnNmZwZWgzZnI2MA==" target="new" style="color:black;">
+					<img src="recursos/logos/logo_insta.jpg" alt="logo instagram" style="height:50px; width:auto;">
+					</a>
+					</p>
+				</div>
+				<div class="texto">
+                    <p style="text-align: justify;">Si te gusta mi arte y quieres ver más de mi trabajo, te invito a visitar <a href="https://www.instagram.com/shao.yang.na/profilecard/?igsh=MXhnNmZwZWgzZnI2MA==" target="new">mi perfil de Instagram</a>. Ahí comparto mis últimas creaciones, el detrás de cámaras de mi proceso creativo y un vistazo más cercano a mi mundo artístico. ¡Acompáñame en esta aventura creativa! ✨🎨</p>
+                </div>
+            	</div>
+            <div id="caja2" class="caja">
+                <div class="caja_imagen">
+					<p style="text-align: center;">
+					<a href="https://buymeacoffee.com/shaoliva03" target="new" style="color:black;">
+					<img src="recursos/logos/buy_me_a_coffee.png" alt="logo buymeacoffee" style="height:50px; width: auto;">
+					</a>
+					</p>
+				</div>
+                <div class="texto">
+                    <p style="text-align: justify;">Si te gusta lo que hago y quieres ayudarme a seguir creando, puedes invitarme a un café en <a href="https://buymeacoffee.com/shaoliva03" target="new">Buymeacoffee</a>. Cada aporte, grande o pequeño, me ayuda a cubrir materiales, tiempo y recursos para continuar este viaje artístico. ¡Gracias por ser parte de este proyecto! ❤️🎨 
+                    
+                    </p>
+                </div>
+            </div>
+			
+            <div id="caja3" class="caja">
+                <div class="caja_imagen">
+					<p style="text-align: center;">
+					<a href="https://www.linkedin.com/in/sh%C3%A0o-oliva-307293344/" target="new" style="color:black;">
+					<img src="recursos/logos/logo_linkedin.png" alt="logo linkedin" style="height:50px; width: auto;">
+					</a>
+					</p>
+				</div>
+                <div class="texto">
+                    <p style="text-align: justify;"> Si buscas a alguien comprometido, innovador y listo para aportar valor a tu equipo o proyecto, no dudes en visitarlo y contactarme a través de <a href="https://www.linkedin.com/in/sh%C3%A0o-oliva-307293344/" target="new">Linkedin</a>. Estoy abierto a nuevas oportunidades y emocionado por colaborar contigo. ¡Hablemos y hagamos algo increíble juntos! 💼🎨
+                    </p>
+                </div>
+            </div>
+    </div>
+
+	
+	<div style="clear: both"> </div>
+
+		<div class="content-paragraph">
+				<h3 style="font-family:'Sour Gummy'; color:black; text-align: center">Tu apoyo no solo enriquece nuestra comunidad, sino que también impulsa la creatividad y el talento.</h3>
+				<h1 style="font-family:'Sour Gummy'; color:black; text-align: center">GRACIAS</h1>
+		</div>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	
+	 <div class="footer">
+		<p>Portfolio Shao © 2024</p>
+		<p>
+		  <a href="mailto:shaoliva03@gmail.com">shaoliva03@gmail.com</a>
+		  +34 620 60 05 65
+		</p>
+	  </div>
+</div>
+</body>
+</html>
+
+

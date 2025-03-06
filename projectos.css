@@ -1,0 +1,337 @@
+@charset "utf-8";
+/* CSS Document */
+
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding-top: 70px; 
+      padding-bottom: 70px; 
+    }
+	  
+	  /* Estilos para el overlay del popup */
+         .overlay {
+            display: none; 
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            border-radius: 15px;
+        }
+
+        .window {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .window img {
+            width: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .window p {
+            margin: 0 0 15px;
+        }
+
+        .accept-butn, .deny-butn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .accept-butn {
+            background-color: #A90000;
+            color: white;
+        }
+
+        .deny-butn {
+            background-color: #C6C6C6;
+            color: white;
+        }
+
+        .accept-butn:hover {
+            opacity:0.8;
+        }
+
+        .deny-butn:hover {
+			opacity:0.8;
+	  	}
+	  
+	 #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFF; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; 
+        }
+
+        #loading-video {
+            width: 200px;
+            height: auto;
+        }
+
+
+    .header {
+      background-color: rgba(255, 255, 255, 0.9);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+    }
+
+    .header .logo img {
+      height: 40px;
+      margin-right: 20px;
+    }
+
+    .header nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+	  
+	
+        .header .logo img {
+            height: 40px;
+            margin-right: 20px; 
+        }
+
+        .header nav {
+            display: flex;
+            gap: 15px; 
+            margin-left: -10px;
+        }
+
+        .header nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .header nav a:hover {
+            color: #A90000; 
+        }
+
+   .footer {
+      background-color: rgba(255, 255, 255, 0.80);
+      color: #333;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      font-size: 12px;
+	  }
+    .footer a {
+      color: #A90000;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .gallery-title {
+      font-family: "Sour Gummy";
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 2px;
+      color: #A90000;
+      font-weight: bold;
+    }
+
+    .gallery-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: 20px 10px;
+      margin-top: 20px; 
+      margin-bottom: 70px; 
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .image-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .image-card img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 10px;
+    }
+
+    .image-card h3 {
+      margin: 10px 0;
+      font-size: 18px;
+      color: #333;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      max-width: 500px;
+      width: 80%;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+
+    .popup img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .popup h3 {
+      margin-top: 15px;
+      text-align: center;
+      font-family: "Sour Gummy";
+    }
+
+    .popup p {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .popup .close-btn {
+      display: block;
+      margin: 20px auto 0;
+      background: #A90000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .popup .close-btn:hover {
+      background: #880000;
+    }
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+	  
+	  .overlay {
+            display: none; 
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            border-radius: 15px;
+        }
+
+        .window {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .window img {
+            width: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .window p {
+            margin: 0 0 15px;
+        }
+
+        .accept-btn, .deny-btn {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .accept-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .deny-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .accept-btn:hover {
+            background-color: #45a049;
+        }
+
+        .deny-btn:hover {
+            background-color: #e53935;
+        }

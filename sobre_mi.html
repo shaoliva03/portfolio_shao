@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Shao</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #FFF; 
+            overflow-y: auto; 
+        }
+
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #FFF; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; 
+        }
+
+        #loading-video {
+            width: 200px;
+            height: auto;
+        }
+
+        #content {
+            display: none;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; 
+            box-sizing: border-box;
+        }
+        
+        .header {
+            background-color: rgba(255, 255, 255, 0.9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: flex-start; 
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+
+        .header .logo img {
+            height: 40px;
+            margin-right: 20px; 
+        }
+
+        .header nav {
+            display: flex;
+            gap: 15px; 
+            margin-left: -10px; 
+        }
+
+        .header nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .header nav a:hover {
+            color: #A90000; 
+        }
+
+        html {
+            scroll-behavior: smooth; 
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+            padding: 50px 80px;
+            margin-top: 80px; 
+        }
+
+        .content-paragraph {
+            color: #777;
+            background-color: white;
+            font-size: 16px; 
+            width: 600px; 
+            margin-right: 20px;
+        }
+
+        .content-image {
+            width: 200px; 
+            height: auto;
+            margin-top: 0px; 
+        }
+
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column; 
+                align-items: center;
+            }
+
+            .content-paragraph {
+                width: 90%; 
+                margin-right: 0; 
+            }
+
+            .content-image {
+                width: 80%; 
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-paragraph {
+                font-size: 14px; 
+                padding: 20px; 
+            }
+
+            .content-image {
+                width: 100%;
+            }
+        }
+			.footer {
+		  background-color: rgba(255, 255, 255, 0.80);
+		  color: #333;
+		  text-align: center;
+		  padding: 10px;
+		  position: fixed;
+		  bottom: 0;
+		  left: 0;
+		  width: 100%;
+		  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+		  font-size: 12px;
+		  }
+        .footer a {
+            color: #A90000;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            const content = document.getElementById('content');
+            
+            setTimeout(() => {
+                loadingScreen.style.display = 'none'; 
+                content.style.display = 'flex'; 
+            }, 4000); 
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const inicioLink = document.querySelector('a[href="#"]');
+            inicioLink.addEventListener('click', (e) => {
+                e.preventDefault(); 
+                window.scrollTo({ top: 0, behavior: 'smooth' }); 
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="loading-screen">
+        <video id="loading-video" autoplay muted loop>
+            <source src="recursos/animaciones/animación.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </div>
+
+    <div id="content">
+        <div class="header">
+            <div class="logo">
+                <img src="recursos/shao/Logo_shao.png" alt="Logo Shao">
+            </div>
+            <nav>
+                <a href="index.html">Inicio</a> 
+                <a href="proyectos.html">Proyectos</a>
+                <a href="#">Sobre mí</a>
+            </nav>
+        </div>
+       
+        <div class="content-container">
+            <div class="content-paragraph">
+                <p>
+                    Soy un <strong>creativo multidisciplinario</strong> con pasión por la ilustración, el diseño de producto, la fotografía y la animación 2D. Me especializo en dar vida a ideas a través de herramientas como Procreate, Photoshop, Illustrator, After Effects, etc. y técnicas que combinan funcionalidad y estética visual.
+                    <br>
+                    Mi experiencia incluye la creación de ilustraciones únicas, el desarrollo de diseños de producto innovadores, capturar momentos e historias a través de la fotografía, y animar conceptos en 2D para narrar historias dinámicas y atractivas. Estoy en constante aprendizaje para perfeccionar mis habilidades y explorar nuevas formas de expresar creatividad.
+                    <br>
+                    Me apasiona crear soluciones visuales, efectivas y atractivas para mis clientes, enfocándome siempre en la calidad y en la satisfacción del cliente. 
+                    <br>
+                    Busco colaborar en proyectos donde pueda aportar una visión integral, combinando mi conocimiento artístico y técnico para crear resultados que destaquen por su originalidad y calidad.
+                </p>
+                <p style="text-align: right">			
+                    <a href="recursos/CV.pdf" target="new" style="font-family:'Sour Gummy'; color:black;">mi CV</a>
+                </p>
+            </div>
+            <img src="recursos/shao/avatar_shao.JPG" alt="Ilustración avatar Shào" class="content-image">
+        </div>
+
+       <div class="footer">
+		<p>Portfolio Shao © 2024</p>
+		<p>
+		  <a href="mailto:shaoliva03@gmail.com">shaoliva03@gmail.com</a>
+		  +34 620 60 05 65
+		</p>
+	  </div>
+    </div>
+</body>
+</html>
+
