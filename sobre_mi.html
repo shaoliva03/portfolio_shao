@@ -7,175 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Grandstander:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: sans-serif;
-            background-color: #FFF; 
-            overflow-y: auto; 
-        }
+    <link rel="stylesheet" href="sobre_mi.css">
+	<script src="sobre_mi.js"></script>
 
-        #loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #FFF; 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999; 
-        }
-
-        #loading-video {
-            width: 200px;
-            height: auto;
-        }
-
-        #content {
-            display: none;
-            padding: 20px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; 
-            box-sizing: border-box;
-        }
-        
-        .header {
-            background-color: rgba(255, 255, 255, 0.9);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: flex-start; 
-            align-items: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 999;
-        }
-
-        .header .logo img {
-            height: 40px;
-            margin-right: 20px; 
-        }
-
-        .header nav {
-            display: flex;
-            gap: 15px; 
-            margin-left: -10px; 
-        }
-
-        .header nav a {
-            text-decoration: none;
-            color: #333;
-            font-size: 16px;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
-
-        .header nav a:hover {
-            color: #A90000; 
-        }
-
-        html {
-            scroll-behavior: smooth; 
-        }
-
-        .content-container {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            text-align: justify;
-            padding: 50px 80px;
-            margin-top: 80px; 
-        }
-
-        .content-paragraph {
-            color: #777;
-            background-color: white;
-            font-size: 16px; 
-            width: 600px; 
-            margin-right: 20px;
-        }
-
-        .content-image {
-            width: 200px; 
-            height: auto;
-            margin-top: 0px; 
-        }
-
-        @media (max-width: 768px) {
-            .content-container {
-                flex-direction: column; 
-                align-items: center;
-            }
-
-            .content-paragraph {
-                width: 90%; 
-                margin-right: 0; 
-            }
-
-            .content-image {
-                width: 80%; 
-            }
-        }
-
-        @media (max-width: 480px) {
-            .content-paragraph {
-                font-size: 14px; 
-                padding: 20px; 
-            }
-
-            .content-image {
-                width: 100%;
-            }
-        }
-			.footer {
-		  background-color: rgba(255, 255, 255, 0.80);
-		  color: #333;
-		  text-align: center;
-		  padding: 10px;
-		  position: fixed;
-		  bottom: 0;
-		  left: 0;
-		  width: 100%;
-		  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-		  font-size: 12px;
-		  }
-        .footer a {
-            color: #A90000;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-    <script>
-        window.addEventListener('load', () => {
-            const loadingScreen = document.getElementById('loading-screen');
-            const content = document.getElementById('content');
-            
-            setTimeout(() => {
-                loadingScreen.style.display = 'none'; 
-                content.style.display = 'flex'; 
-            }, 4000); 
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const inicioLink = document.querySelector('a[href="#"]');
-            inicioLink.addEventListener('click', (e) => {
-                e.preventDefault(); 
-                window.scrollTo({ top: 0, behavior: 'smooth' }); 
-            });
-        });
-    </script>
 </head>
 <body>
     <div id="loading-screen">
@@ -218,8 +52,8 @@
        <div class="footer">
 		<p>Portfolio Shao © 2024</p>
 		<p>
-		  <a href="mailto:shaoliva03@gmail.com">shaoliva03@gmail.com</a>
-		  +34 620 60 05 65
+		  <a href="mailto:shao.oliva.studio@gmail.com">shao.oliva.studio@gmail.com</a>
+      +34 620 60 05 65
 		</p>
 	  </div>
     </div>
